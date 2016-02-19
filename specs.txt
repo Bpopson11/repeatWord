@@ -1,0 +1,46 @@
+Behavior (this program should...):
+    It formats any given string and search word into an array while eliminating odd characters. This is done so that everything is consistent, therefore aiding the program in searching for repeated words despite how that word might have been capitalized, etc.
+
+Input Example:
+    string: "How are you? How is your mother? My how you've grown UP!"
+    find: "How"
+
+Output Example:
+    array('how', 'are', 'you', 'how', 'is', 'your', 'mother', 'my', 'how', 'you've', 'grown', 'up')
+    find: "how"
+
+
+
+Behavior:
+    It can identify one instance of a simple word in a provided string. If it can find one, then the idea is that finding the multiple will be that much easier.
+
+Input Example:
+    string: "How are you? How is your mother?"
+    find: "how"
+
+Output Example:
+    "How" count: 1
+
+
+
+Behavior:
+    It can identify multiple instances of a simple word in a given string. This is the basic purpose of the function and once it can find easier words (i.e. not a contraction), it'll be able to move forward.
+
+Input Example:
+    string: "How are you? How is your mother? My how you've grown UP!"
+    find: "how"
+
+Output Example:
+    "How" count: 3
+
+
+
+Behavior:
+    It can find words that include punctuation since that is a possibility.
+
+Input Example:
+    string: "My how you've grown UP! You've gotten so tall too!"
+    find: "you've"
+
+Output Example:
+    "You've" count: 2
