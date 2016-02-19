@@ -22,6 +22,9 @@
       </form><br><br>
       <div class="well">
         <p class="answer">Your word was found {{ result }} times!</p>
+          {% if format is not empty %}
+            {{ format }}
+            {% endif %}
       </div>
     </div>
   </body>
