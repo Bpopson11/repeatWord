@@ -25,9 +25,9 @@ class WordRepeatCounter
         $word_to_count = strtolower($word_to_count);
 
         $string_input = str_replace($word_to_count, strtoupper($word_to_count), $string_input);
-        return $string_input;
-      }
 
+        return $string_input;
+    }
 }
 
 ?>

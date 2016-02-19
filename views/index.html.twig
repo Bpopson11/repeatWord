@@ -7,18 +7,20 @@
   </head>
   <body>
     <div class="container">
-      <h1>Word Count!</h1>
-      <p>Want to know how many times a word is repeated in a sentence? Or perhaps a paragraph? Well you're in luck! Just enter in your desired text to search below along with the word you wish to find and just sit back and relax while we find out for you.</p>
+      <div class="well title">
+        <h1>Word Count!</h1>
+        <p>Want to know how many times a word is repeated in a sentence? Or perhaps a paragraph? Well you're in luck! Just enter in your desired text to search below along with the word you wish to find and just sit back and relax while we find out for you.</p>
+      </div>
       <form action="/toCount">
         <div class="form-group">
-          <label for="sentence">Enter a sentence/paragraph/etc here to be searched</label>
-          <input type="text" id="sentence" name="sentence" class='form-control'><br>
+          <label for="sentence">Enter a sentence/paragraph/etc here to be searched:</label>
+          <input type="text" id="sentence" name="sentence" class='form-control' required><br>
         </div>
           <div class="form-group">
             <label for="find">Enter here the word you wish to find the instance count of:</label>
-            <input type="text" id="find" name="find" class='form-control'><br>
+            <input type="text" id="find" name="find" class='form-control' required><br>
           </div>
-          <button class="btn btn-success" type="submit">Now Just Relax!</button>
+          <button class="btn" type="submit">Now Just Relax!</button>
       </form><br><br>
       <div class="well">
         <p class="answer">Your word was found {{ result }} times!</p>
