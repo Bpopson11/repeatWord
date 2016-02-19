@@ -23,15 +23,9 @@ class WordRepeatCounter
     function stringHighlight($string_input, $word_to_count)
     {
         $word_to_count = strtolower($word_to_count);
-        $revised_string = explode(" ", $string_input);
 
-        foreach ($revised_string as $word) {
-          if ($word == $word_to_count) {
-            preg_replace("/($word_to_count)/i","<span style='background-color:#b99596>'$0</span>",$revised_string);
-          }
-        }
-          $revised_string = implode(" ", $revised_string);
-          return ucfirst($revised_string);
+        $string_input = str_replace($word_to_count, strtoupper($word_to_count), $string_input);
+        return $string_input;
       }
 
 }
