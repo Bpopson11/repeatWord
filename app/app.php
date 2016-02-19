@@ -13,7 +13,9 @@
     });
 
     $app->get("/toCount", function() use ($app) {
-        return $app['twig']->render('index.html.twig');
+        $new_search = new WordRepeatCounter;
+        $word_search = $new_search->stringWordCount($_GET['sentence'], $_GET['find']);
+        return $app['twig']->render('index.html.twig', array('result' => $word_search));
     });
 
     return $app;

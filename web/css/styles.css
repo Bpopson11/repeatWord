@@ -1,0 +1,19 @@
+body {
+  font-family: "Palatino Linotype", "Book Antigua", Palatino, serif;
+  font-size: 20px;
+  background-color: #83656c;
+  color: #372430;
+}
+
+.well {
+  background-color: #cfc5cd;
+}
+
+.btn {
+  background-color: #5c3d50;
+  border-color: #5c3d50;
+}
+
+.form-control {
+  background-color: #cfc5cd;
+}
