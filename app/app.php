@@ -12,7 +12,9 @@
         return $app['twig']->render('index.html.twig');
     });
 
-
+    $app->get("/toCount", function() use ($app) {
+        return $app['twig']->render('index.html.twig');
+    });
 
     return $app;
 ?>
