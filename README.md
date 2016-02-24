@@ -21,7 +21,7 @@ _This app was built with PHP using Silex and Twig templates. The purpose of this
 
 ## Known Bugs
 
-_As of 2/19/16 the stringHighlight method does not work properly on single letter words such as "a", or "I". Instead the method will make every instance of that letter capital. The instance count for those words is correct though._
+_As of 2/24/16 there are no known bugs._
 
 ## Technologies Used
 
