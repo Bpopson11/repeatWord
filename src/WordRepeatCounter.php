@@ -19,15 +19,6 @@ class WordRepeatCounter
         return $wordCount;
     }
 
-
-    function stringHighlight($sentence_input, $word_to_count)
-    {
-        $word_to_count = strtolower($word_to_count);
-
-        $sentence_input = str_replace($word_to_count, strtoupper($word_to_count), $sentence_input);
-
-        return $sentence_input;
-    }
 }
 
 ?>
