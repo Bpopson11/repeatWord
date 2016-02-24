@@ -5,7 +5,7 @@
     class WordRepeatCounterTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_stringFormat_1letter() //this includes formatting the string and input word so that the function can easily seek out the desired word.
+        function test_stringFormat_1letter()
         {
             //Arrange
             $test_WordRepeatCounter = new WordRepeatCounter;
@@ -19,7 +19,7 @@
             $this->assertEquals(1, $result);
         }
 
-        function test_stringFormat_2letter() //this includes formatting the string and input word so that the function can easily seek out the desired word.
+        function test_stringFormat_falseletter()
         {
             //Arrange
             $test_WordRepeatCounter = new WordRepeatCounter;
@@ -31,6 +31,34 @@
 
             //Assert
             $this->assertEquals(0, $result);
+        }
+
+        function test_stringFormat_2letter()
+        {
+            //Arrange
+            $test_WordRepeatCounter = new WordRepeatCounter;
+            $string_input = "a b";
+            $word_to_count = "b";
+
+            //Act
+            $result = $test_WordRepeatCounter->stringWordCount($string_input, $word_to_count);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
+        function test_stringFormat_1wordApostrophe()
+        {
+            //Arrange
+            $test_WordRepeatCounter = new WordRepeatCounter;
+            $string_input = "They're";
+            $word_to_count = "They're";
+
+            //Act
+            $result = $test_WordRepeatCounter->stringWordCount($string_input, $word_to_count);
+
+            //Assert
+            $this->assertEquals(1, $result);
         }
 
 
